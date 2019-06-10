@@ -1,0 +1,11 @@
+F:\GitHub\lates codes\Crud-with-asp.net-core\DotNetCore\bin\Debug\netcoreapp2.0\DotNetCore.deps.json
+F:\GitHub\lates codes\Crud-with-asp.net-core\DotNetCore\bin\Debug\netcoreapp2.0\DotNetCore.runtimeconfig.json
+F:\GitHub\lates codes\Crud-with-asp.net-core\DotNetCore\bin\Debug\netcoreapp2.0\DotNetCore.runtimeconfig.dev.json
+F:\GitHub\lates codes\Crud-with-asp.net-core\DotNetCore\bin\Debug\netcoreapp2.0\DotNetCore.dll
+F:\GitHub\lates codes\Crud-with-asp.net-core\DotNetCore\bin\Debug\netcoreapp2.0\DotNetCore.pdb
+F:\GitHub\lates codes\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.0\DotNetCore.csprojAssemblyReference.cache
+F:\GitHub\lates codes\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.0\DotNetCore.csproj.CoreCompileInputs.cache
+F:\GitHub\lates codes\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.0\DotNetCore.AssemblyInfoInputs.cache
+F:\GitHub\lates codes\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.0\DotNetCore.AssemblyInfo.cs
+F:\GitHub\lates codes\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.0\DotNetCore.dll
+F:\GitHub\lates codes\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.0\DotNetCore.pdb
