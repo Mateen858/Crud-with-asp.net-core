@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "9730342b7b575aaeb702fae13ca2a10b3cc123ef"
+    "signature": "543f0ec6b161f274751d3b7b5be8ec3482c89c54"
   },
   "compilationOptions": {
     "defines": [
@@ -27,13 +27,25 @@
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
+          "Secret": "2.0.0"
         },
         "runtime": {
           "DotNetCore.dll": {}
         },
         "compile": {
           "DotNetCore.dll": {}
+        }
+      },
+      "ElementAt/2.0.0": {
+        "runtime": {
+          "lib/ElementAt.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/ElementAt.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
@@ -203,6 +215,20 @@
         },
         "compile": {
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
+        }
+      },
+      "Secret/2.0.0": {
+        "dependencies": {
+          "ElementAt": "2.0.0"
+        },
+        "runtime": {
+          "lib/ElementAt.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/ElementAt.dll": {}
         }
       },
       "System.Composition/1.0.31": {
@@ -3544,6 +3570,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "ElementAt/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fnACcfVVuaa8mYyhDakNnpD2zPH6g4mc4TX18jVOzCZaoq3pbZqajGPTeJxmy2fr97+HNmWSSYcOmCSln8QHgg==",
+      "path": "elementat/2.0.0",
+      "hashPath": "elementat.2.0.0.nupkg.sha512"
+    },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
       "serviceable": true,
@@ -3620,6 +3653,13 @@
       "sha512": "sha512-qbXaB76XYUVLocLBs8Z9TS/ERGK2wm797feO+0JEPFvT7o7MRadOR77mqaSD4J1k8G+DlZQyq+MlkCuxrkr3ag==",
       "path": "nuget.frameworks/4.7.0",
       "hashPath": "nuget.frameworks.4.7.0.nupkg.sha512"
+    },
+    "Secret/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/iIgJUW41FZyV2Nh11/ERmnxwsfTWV3NCAFOjG7gcPCKzK5e1BbedlTrDAZ15YvTS+1Q+za2tJMf1R1bF8EAMQ==",
+      "path": "secret/2.0.0",
+      "hashPath": "secret.2.0.0.nupkg.sha512"
     },
     "System.Composition/1.0.31": {
       "type": "package",

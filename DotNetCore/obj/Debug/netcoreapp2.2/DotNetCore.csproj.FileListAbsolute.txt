@@ -5,7 +5,6 @@ E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\bin\Debug\netcoreapp2.2\D
 E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\bin\Debug\netcoreapp2.2\DotNetCore.pdb
 E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\bin\Debug\netcoreapp2.2\DotNetCore.Views.dll
 E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\bin\Debug\netcoreapp2.2\DotNetCore.Views.pdb
-E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\DotNetCore.csprojAssemblyReference.cache
 E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\DotNetCore.csproj.CoreCompileInputs.cache
 E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\DotNetCore.RazorAssemblyInfo.cache
 E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\DotNetCore.RazorAssemblyInfo.cs

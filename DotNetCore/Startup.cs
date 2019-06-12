@@ -16,9 +16,19 @@ namespace DotNetCore
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private string _moviesapikey = null;
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
+
+            var builder = new ConfigurationBuilder().SetBasePath(env.ContentRootPath).AddJsonFile("appsettings.json", optional: false, reloadOnChange: true).AddEnvironmentVariables();
+            if (env.IsDevelopment())
+            {
+                builder.AddUserSecrets<Startup>();
+            }
+            Configuration = builder.Build();
+
+
         }
 
         public IConfiguration Configuration { get; }
@@ -38,11 +48,24 @@ namespace DotNetCore
 
             services.AddDbContext<MovieContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("MovieContext")));
+
+
+            //get api key
+          //  _moviesapikey = Configuration["Movies:ServiceAPIKey"];
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            //var result = string.IsNullOrEmpty(_moviesapikey) ? "Null" : "Not Null";
+            //app.Run(async (AppContext) =>
+            //{
+            //await AppContext.Response.WriteAsync($"Secret Key is{ result}");
+            //    await AppContext.Response.WriteAsync($"Secret Key is{ _moviesapikey}");
+            //});
+
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

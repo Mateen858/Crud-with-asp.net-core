@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "ElementAt/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/ElementAt.dll": {}
+        },
+        "runtime": {
+          "lib/ElementAt.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -3121,6 +3130,18 @@
           }
         }
       },
+      "Secret/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "ElementAt": "2.0.0"
+        },
+        "compile": {
+          "lib/ElementAt.dll": {}
+        },
+        "runtime": {
+          "lib/ElementAt.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4724,6 +4745,20 @@
     }
   },
   "libraries": {
+    "ElementAt/2.0.0": {
+      "sha512": "fnACcfVVuaa8mYyhDakNnpD2zPH6g4mc4TX18jVOzCZaoq3pbZqajGPTeJxmy2fr97+HNmWSSYcOmCSln8QHgg==",
+      "type": "package",
+      "path": "elementat/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "elementat.2.0.0.nupkg.sha512",
+        "elementat.nuspec",
+        "lib/ElementAt.dll",
+        "lib/ElementAt.pdb",
+        "lib/ElementAt.xml"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "owAlEIUZXWSnkK8Z1c+zR47A0X6ykF4XjbPok4lQKNuciUfHLGPd6QnI+rt/8KlQ17PmF+I4S3f+m+Qe4IvViw==",
       "type": "package",
@@ -8389,6 +8424,20 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Secret/2.0.0": {
+      "sha512": "/iIgJUW41FZyV2Nh11/ERmnxwsfTWV3NCAFOjG7gcPCKzK5e1BbedlTrDAZ15YvTS+1Q+za2tJMf1R1bF8EAMQ==",
+      "type": "package",
+      "path": "secret/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/ElementAt.dll",
+        "lib/ElementAt.pdb",
+        "lib/ElementAt.xml",
+        "secret.2.0.0.nupkg.sha512",
+        "secret.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -12932,7 +12981,8 @@
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3",
+      "Secret >= 2.0.0"
     ]
   },
   "packageFolders": {
@@ -12999,6 +13049,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[2.2.3, )"
+          },
+          "Secret": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           }
         },
         "imports": [
@@ -13008,5 +13062,27 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ElementAt 2.0.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "ElementAt",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Secret 2.0.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "Secret",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    }
+  ]
 }
