@@ -30,3 +30,8 @@ E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\D
 E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\DotNetCore.csproj.CopyComplete
 E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\Razor\Views\HelloWorld\Index.g.cshtml.cs
 E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\Razor\Views\HelloWorld\WelcomeP.g.cshtml.cs
+E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Movies\Create.g.cshtml.cs
+E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Movies\Delete.g.cshtml.cs
+E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Movies\Details.g.cshtml.cs
+E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Movies\Edit.g.cshtml.cs
+E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Movies\Index.g.cshtml.cs
