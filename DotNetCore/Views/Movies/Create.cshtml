@@ -1,9 +1,11 @@
-﻿@model DotNetCore.Models.Movie
+﻿@model DotNetCore.Models.MovieViewModel
 
 @{
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
 
 <h1>Create</h1>
 
@@ -14,24 +16,38 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
+                <label asp-for="movie.Title" class="control-label"></label>
+                <input asp-for="movie.Title" class="form-control" />
+                <span asp-validation-for="movie.Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ReleaseDate" class="control-label"></label>
-                <input asp-for="ReleaseDate" class="form-control" />
-                <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+                <label asp-for="movie.ReleaseDate" class="control-label"></label>
+                <input asp-for="movie.ReleaseDate" class="form-control" />
+                <span asp-validation-for="movie.ReleaseDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Genre" class="control-label"></label>
-                <input asp-for="Genre" class="form-control" />
-                <span asp-validation-for="Genre" class="text-danger"></span>
+                <label asp-for="movie.Genre" class="control-label"></label>
+                <input asp-for="movie.Genre" class="form-control" />
+                <span asp-validation-for="movie.Genre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
+                <label asp-for="movie.Price" class="control-label"></label>
+                <input asp-for="movie.Price" class="form-control" />
+                <span asp-validation-for="movie.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="movie.IsWatched" class="control-label"></label>
+                <input type="checkbox" asp-for="movie.IsWatched" class="custom-checkbox" />
+                <span asp-validation-for="movie.IsWatched" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="movie.QualityId" class="control-label"></label>
+                <select asp-for="movie.QualityId"
+                        asp-items="@(new SelectList(Model.movieQualities,"Id","Quality"))" class="form-control">
+                    <option>Please select one</option>
+                </select>
+
+                <span asp-validation-for="movie.QualityId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

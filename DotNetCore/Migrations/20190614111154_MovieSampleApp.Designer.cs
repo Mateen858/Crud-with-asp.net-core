@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DotNetCore.Migrations
 {
     [DbContext(typeof(MovieContext))]
-    [Migration("20190612102757_Sample-Movies-App")]
-    partial class SampleMoviesApp
+    [Migration("20190614111154_MovieSampleApp")]
+    partial class MovieSampleApp
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,9 +27,15 @@ namespace DotNetCore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("CoverImageUrl");
+
                     b.Property<string>("Genre");
 
+                    b.Property<bool>("IsWatched");
+
                     b.Property<decimal>("Price");
+
+                    b.Property<int>("QualityId");
 
                     b.Property<DateTime>("ReleaseDate");
 
@@ -38,6 +44,41 @@ namespace DotNetCore.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Movie");
+                });
+
+            modelBuilder.Entity("DotNetCore.Models.MovieQuality", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Quality");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MovieQualities");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Quality = "HD"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Quality = "720p"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Quality = "1080p"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Quality = "4k"
+                        });
                 });
 #pragma warning restore 612, 618
         }

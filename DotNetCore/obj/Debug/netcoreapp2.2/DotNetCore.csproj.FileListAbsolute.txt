@@ -34,3 +34,4 @@ E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\R
 E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Movies\Details.g.cshtml.cs
 E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Movies\Edit.g.cshtml.cs
 E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Movies\Index.g.cshtml.cs
+E:\Mateen Dev\Github\Crud-with-asp.net-core\DotNetCore\obj\Debug\netcoreapp2.2\DotNetCore.csprojAssemblyReference.cache

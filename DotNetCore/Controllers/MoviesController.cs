@@ -45,7 +45,16 @@ namespace DotNetCore.Controllers
         // GET: Movies/Create
         public IActionResult Create()
         {
-            return View();
+            
+            var vm = new MovieViewModel();
+            vm.movieQualities = _context.MovieQualities.ToList();
+            //vm.movieQualities = new List<MovieQuality> {
+            //    new MovieQuality{Id = 1, Quality =  "High Defination" },
+            //   new MovieQuality{Id = 2, Quality =  "4k" },
+            //   new MovieQuality{Id = 3, Quality =  "720p" },
+            //   new MovieQuality{Id = 4, Quality =  "1080p" },
+            //};
+            return View(vm);
         }
 
         // POST: Movies/Create
@@ -53,7 +62,7 @@ namespace DotNetCore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,IsWatched,QualityId")] Movie movie)
         {
             if (ModelState.IsValid)
             {

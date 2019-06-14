@@ -14,6 +14,10 @@ namespace DotNetCore.Models
         public DateTime ReleaseDate { get; set; }
         public string Genre { get; set; }
         public decimal Price { get; set; }
+        public bool IsWatched { get; set; }
+        public string CoverImageUrl { get; set; }
+        public int QualityId { get; set; }
+
 
     }
 }
