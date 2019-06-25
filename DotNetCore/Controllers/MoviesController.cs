@@ -6,16 +6,21 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DotNetCore.Models;
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace DotNetCore.Controllers
 {
     public class MoviesController : Controller
     {
         private readonly MovieContext _context;
+        private IHostingEnvironment _hostingEnvironment;
 
-        public MoviesController(MovieContext context)
+        public MoviesController(MovieContext context, IHostingEnvironment environment)
         {
             _context = context;
+            _hostingEnvironment = environment;
         }
 
         // GET: Movies
@@ -62,10 +67,27 @@ namespace DotNetCore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,IsWatched,QualityId")] Movie movie)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,IsWatched,QualityId,ImageUrl")] Movie movie, IFormFile file)
         {
             if (ModelState.IsValid)
             {
+
+                // full path to file in temp location
+                var filePath = Path.GetTempFileName();
+                string unique = DateTime.UtcNow.Ticks.ToString();
+                var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads", file.FileName);
+
+              //  var upload2 = "E:/Mateen Dev/Github/Crud-with-asp.net-core/DotNetCore/uploads";
+                if (file.Length > 0)
+                    {
+                        using (var stream = new FileStream(uploads, FileMode.Create))
+                        {
+                            await file.CopyToAsync(stream);
+                        
+                        }
+                    }
+
+                movie.ImageUrl = "/uploads/"  + file.FileName;
                 _context.Add(movie);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

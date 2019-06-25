@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DotNetCore.Migrations
 {
     [DbContext(typeof(MovieContext))]
-    [Migration("20190614111154_MovieSampleApp")]
-    partial class MovieSampleApp
+    [Migration("20190625065628_movies")]
+    partial class movies
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,6 +30,8 @@ namespace DotNetCore.Migrations
                     b.Property<string>("CoverImageUrl");
 
                     b.Property<string>("Genre");
+
+                    b.Property<string>("ImageUrl");
 
                     b.Property<bool>("IsWatched");
 

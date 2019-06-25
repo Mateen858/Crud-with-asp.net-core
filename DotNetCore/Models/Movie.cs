@@ -17,6 +17,8 @@ namespace DotNetCore.Models
         public bool IsWatched { get; set; }
         public string CoverImageUrl { get; set; }
         public int QualityId { get; set; }
+        [Display(Name ="Cover")]
+        public string ImageUrl { get; set; }
 
 
     }

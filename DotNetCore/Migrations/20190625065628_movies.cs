@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DotNetCore.Migrations
 {
-    public partial class MovieSampleApp : Migration
+    public partial class movies : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -20,7 +20,8 @@ namespace DotNetCore.Migrations
                     Price = table.Column<decimal>(nullable: false),
                     IsWatched = table.Column<bool>(nullable: false),
                     CoverImageUrl = table.Column<string>(nullable: true),
-                    QualityId = table.Column<int>(nullable: false)
+                    QualityId = table.Column<int>(nullable: false),
+                    ImageUrl = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

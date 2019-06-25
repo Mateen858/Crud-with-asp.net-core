@@ -29,6 +29,8 @@ namespace DotNetCore.Migrations
 
                     b.Property<string>("Genre");
 
+                    b.Property<string>("ImageUrl");
+
                     b.Property<bool>("IsWatched");
 
                     b.Property<decimal>("Price");
